@@ -1,0 +1,132 @@
+*{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+/* HEADER */
+
+.header{
+    width: 100%;
+    display: flex;
+    background-color: #444444;
+}
+.grid-title-cols{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    width: 100%;
+}
+.logo{
+    display: flex;
+    justify-content: flex-end;
+}
+.logo img{
+    height: 10vh;
+}
+.navigation{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navigation a{
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+}
+
+/* FOOTER */
+.footer{
+    width: 100%;
+    height: 10vh;
+    background-color: #444444;
+    display: flex;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+.text_footer{
+    padding: 20px 50px;
+    color: white;
+    align-self: center;
+    margin: 0 auto;
+}
+
+/* Основа */
+.box1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text_block{
+    width: 70%;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 30px;
+    font-size: 40px;
+    font-weight: lighter;
+    padding: 40px;
+    margin-top: 50px;
+    background-image: url('../img/polygon.png');
+    opacity: 0.85;
+    text-align: center;
+}
+
+.box2{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4em;
+}
+
+.box2 img{
+    border-radius: 50px;
+}
+.box2 h3{
+    font-size: 40px;
+    text-align: center;
+}
+
+/* MEDIA */
+
+@media screen and (width < 1366px) {
+    .box2 h3{
+        font-size: 30px;
+    }
+    .text_block{
+        font-size: 30px;
+    }
+    .box2{
+        width: 75%;
+    }
+}
+
+@media screen and (width < 1024px) {
+    .box2 h3{
+        font-size: 20px;
+    }
+    .text_block{
+        font-size: 20px;
+    }
+}
+
+@media screen and (width < 768px) {
+    .header{
+        width: 100%;
+    }
+    .grid-title-cols{
+        grid-template-columns: 100%;
+        width: 70%;
+        margin: 0 auto;
+    }
+    .navigation{
+        flex-direction: column;
+        align-items: start;
+        line-height: 40px;
+    }
+    .logo{
+        justify-content: flex-start;
+    }
+    .text_footer{
+        font-size: 15px;
+    }
+}
